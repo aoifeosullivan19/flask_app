@@ -45,7 +45,7 @@ setup(
     include_package_data=True,
     keywords='flask_app',
     name='flask_app',
-    packages=find_packages(include=['flask_app'], ['systeminfo']),
+    packages=find_packages(include=['flask_app', 'systeminfo']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
