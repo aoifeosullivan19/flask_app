@@ -1,16 +1,12 @@
 from flask import render_template
 from flask_app import app
-from systeminfo import systeminfo
+from systeminfo.main import get_platform
 
 @app.route('/')
 def index():
 	returnDict={}
-	returnDict['user']='Aoife OSullivan'
+	returnDict['user']='Aoife O Sullivan'
 	returnDict['title']='Home'
-	return render_template("index.html", **returnDict)
+	returnDict['platform'] = get_platform()
+	return render_template ("index.html", **returnDict)
 
-
-def main():
-	return systeminfo.get_platform_info()
-	
-	

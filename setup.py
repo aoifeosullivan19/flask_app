@@ -36,6 +36,7 @@ setup(
     entry_points={
         'console_scripts': [
             'flask_app=flask_app.cli:main',
+		'systeminfo=systeminfo.main:main',
         ],
     },
     install_requires=requirements,
